@@ -16,6 +16,8 @@
     let playerChoice = prompt("Rock, Paper, Scissors?");
     let computerChoice = getComputerChoice; /* Variable acts like function. Important to define as function without () so variable can be called like function */
 
+    rockPaperScissors(playerChoice,computerChoice);
+
 
     function getComputerChoice() {
 
@@ -47,6 +49,8 @@
     function rockPaperScissors(playerSelection, computerSelection) {
      
       console.log(`Player chose ${playerSelection}. Computer chose ${computerSelection}.`)
+
+      // Player win scenarios
      
       if (playerSelection == "Rock" && computerSelection == "Scissors") {
         console.log ("Player wins!")
@@ -58,13 +62,16 @@
         console.log ("Player wins!")
       }
 
-      else if (playerSelection == "Paper" && computerSelection == "Rock") {
-        console.log ("Player wins!")
-      }else if (playerSelection == "Paper" && computerSelection == "Rock") {
-        console.log ("Player wins!")
-      }else if (playerSelection == "Paper" && computerSelection == "Rock") {
-        console.log ("Player wins!")
+      // Computer wins scenarios
+
+      else if (computerSelection == "Rock" && playerSelection == "Paper") {
+        console.log ("Computer wins!")
       }
+      else if (computerSelection == "Scissors" && playerSelection == "Paper") {
+        console.log ("Computer wins!")
+      }
+      else if (computerSelection == "Paper" && playerSelection == "Rock") {
+        console.log ("Computer wins!")
 
     }
 
