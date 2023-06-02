@@ -12,39 +12,39 @@
     let rock;
     let paper;
     let scissors;
-    
-    let choice = Math.random();
 
-    function getComputerChoice(choice) {
+    function getComputerChoice() {
 
+      choice = Math.random();
 
-      switch (choice) { // Converts choice to selection
-
-        case (choice > 0 && choice <= 0.3): // Rock
+        if (choice > 0 && choice < 0.4) {
           choice = "Rock";
-          console.log(choice);
-          break;
+          return console.log(choice);
+          }
 
-        case (choice >= 0.4 && choice <= 0.6): // Paper
+        else if (choice >= 0.4 && choice < 0.7) { // Paper
           choice = "Paper";
-          console.log(choice);
-          break;
+          return console.log(choice);
+        }
 
-        case (choice >= 0.7 && choice < 1): // Scissors
+        else if (choice >= 0.7 && choice < 1) { // Scissors
           choice = "Scissors";
-          console.log(choice);
-          break;
+          return console.log(choice);
+        }
+
+        else {
+          console.log('Oops');
+        }
       }
 
-      console.log(choice);
+      // console.log(typeof choice, choice);
 
-    }
 
     function rockPaperScissors(playerSelection, computerSelection) {
 
     }
 
-    console.log(choice);
+    getComputerChoice();
 
   </script>
 </body>
