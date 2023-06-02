@@ -16,31 +16,30 @@
     let playerChoice = prompt("Rock, Paper, Scissors?");
     let computerChoice = getComputerChoice; /* Variable acts like function. Important to define as function without () so variable can be called like function */
 
-    rockPaperScissors(playerChoice,computerChoice);
-
-
     function getComputerChoice() {
 
-      choice = Math.random();
+      let choice = Math.random();
 
         if (choice > 0 && choice < 0.4) {
           choice = rock;
-          return console.log(choice);
+          console.log(choice);
           }
 
         else if (choice >= 0.4 && choice < 0.7) { // Paper
           choice = paper;
-          return console.log(choice);
+          console.log(choice);
         }
 
         else if (choice >= 0.7 && choice < 1) { // Scissors
           choice = scissors;
-          return console.log(choice);
+          console.log(choice);
         }
 
         else {
           console.log('Oops');
         }
+
+        return choice;
       }
 
       // console.log(typeof choice, choice);
@@ -72,10 +71,15 @@
       }
       else if (computerSelection == "Paper" && playerSelection == "Rock") {
         console.log ("Computer wins!")
+      }
+      else {
+        console.log('It\'s a tie!');
+      }
+
 
     }
 
-
+    rockPaperScissors(playerChoice,getComputerChoice());
 
   </script>
 </body>
