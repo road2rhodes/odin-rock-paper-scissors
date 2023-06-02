@@ -8,28 +8,29 @@
 </head>
 <body>
   <script>
-
+    // Variables for choices
     let rock;
     let paper;
     let scissors;
+    
     let choice = Math.random();
 
     function getComputerChoice(choice) {
 
 
-      switch (choice) {
+      switch (choice) { // Converts choice to selection
 
-        case (choice > 0 && choice <= 0.3):
+        case (choice > 0 && choice <= 0.3): // Rock
           choice = "Rock";
           console.log(choice);
           break;
 
-        case (choice >= 0.4 && choice <= 0.6):
+        case (choice >= 0.4 && choice <= 0.6): // Paper
           choice = "Paper";
           console.log(choice);
           break;
 
-        case (choice >= 0.7 && choice < 1):
+        case (choice >= 0.7 && choice < 1): // Scissors
           choice = "Scissors";
           console.log(choice);
           break;
