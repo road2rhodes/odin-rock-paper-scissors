@@ -9,14 +9,41 @@
 <body>
   <script>
 
+    let rock;
+    let paper;
+    let scissors;
+    let choice = Math.random();
+
     function getComputerChoice(choice) {
-      choice = Math.random();
+
+
+      switch (choice) {
+
+        case (choice > 0.1 && choice <= 0.3):
+          choice = "Rock";
+          console.log(choice);
+          break;
+
+        case (choice >= 0.4 && choice <= 0.6):
+          choice = "Paper";
+          console.log(choice);
+          break;
+
+        case (choice >= 0.7 && choice < 1):
+          choice = "Scissors";
+          console.log(choice);
+          break;
+      }
+
       console.log(choice);
+
     }
 
     function rockPaperScissors(playerSelection, computerSelection) {
 
     }
+
+    console.log(choice);
 
   </script>
 </body>
