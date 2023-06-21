@@ -14,19 +14,20 @@
 
   function getComputerChoice() {
 
-    let choice = Math.random();
+    let calculation = Math.random();
+    let choice;
 
     /* Converting random number to choice. 0.1-0.3 = rock, 0.4-0.6 = scissors, 0.7-0.9 = paper. This assumes random number won't be 0 or 1*/
 
-      if (choice > 0 && choice < 0.4) {
+      if (calculation > 0 && calculation < 0.4) {
         choice = rock;
         }
 
-      else if (choice >= 0.4 && choice < 0.7) { // Paper
+      else if (calculation >= 0.4 && calculation < 0.7) { // Paper
         choice = paper;
       }
 
-      else if (choice >= 0.7 && choice < 1) { // Scissors
+      else if (calculation >= 0.7 && calculation < 1) { // Scissors
         choice = scissors;
       }
 
@@ -83,3 +84,9 @@
 
 const rockButton = document.getElementById('rock');
 rockButton.addEventListener('click', () => {playerChoice = rock; console.log(playerChoice); playRound(playerChoice,computerChoice)})
+
+const paperButton = document.getElementById('paper');
+paperButton.addEventListener('click', () => {playerChoice = paper; console.log(playerChoice); playRound(playerChoice,computerChoice)})
+
+const scissorsButton = document.getElementById('scissors');
+scissorsButton.addEventListener('click', () => {playerChoice = scissors; console.log(playerChoice); playRound(playerChoice,computerChoice)})
