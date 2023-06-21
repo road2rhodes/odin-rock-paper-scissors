@@ -1,5 +1,10 @@
 function game() { // wrapper for game functions
       
+  
+  const newGame = document.querySelector('#new-game');
+  newGame.addEventListener('click', game);
+  console.log(newGame);
+  
   // Variables for choices
   let rock = "rock";
   let paper = "paper";
