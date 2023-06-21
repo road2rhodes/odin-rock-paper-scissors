@@ -90,3 +90,12 @@ paperButton.addEventListener('click', () => {playerChoice = paper; console.log(p
 
 const scissorsButton = document.getElementById('scissors');
 scissorsButton.addEventListener('click', () => {playerChoice = scissors; console.log(playerChoice); playRound(playerChoice,computerChoice)})
+
+const displayResults = document.createElement('div');
+displayResults.classList = "results";
+displayResults.innerText = 
+const buttons = document.querySelector('.buttons');
+buttons.appendChild(displayResults);
+
+
+console.log(buttons);
