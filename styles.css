@@ -21,7 +21,7 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   color: inherit;
-  back
+  text-shadow: 2px 2px 2px rgb(86, 62, 172);
 }
 
 /* || Buttons || */
