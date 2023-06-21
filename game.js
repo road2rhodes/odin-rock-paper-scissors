@@ -73,6 +73,7 @@ function getComputerChoice() {
   let playerScore = 0;
   let computerScore = 0;
   const scores = document.getElementById('scores');
+  scores.style.cssText="text-align: center; margin: 1em 0;"
  
 
 // | Play Rounds Function |
@@ -112,7 +113,7 @@ function getComputerChoice() {
     }
 
     // Updates scores
-    scores.innerText = `Scores: \n Player: ${playerScore} \n Computer: ${computerScore}`;
+    scores.innerText = `Scores: \n Player: ${playerScore} Computer: ${computerScore}`;
      
 
     return displayResults.innerText = `${results} \n ${winner}`;
