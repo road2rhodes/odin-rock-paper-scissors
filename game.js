@@ -11,6 +11,9 @@
     let choice // placeholder for computer choice calculation
     let computerChoice = getComputerChoice; // turn computer choice into function, so getComputerChoice is re-called each time. When I assigned getComputerChoice() by itself, it never updated.
 
+    let playerScore = 0;
+    let computerScore = 0;
+
 
   // | Functionality for game buttons and results div |
 
@@ -80,25 +83,25 @@ function getComputerChoice() {
     // Player win scenarios
   
     if (playerSelection === rock && computerSelection === scissors) {
-      winner = playWins
+      winner = playWins; playerScore += 1;
     }
     else if (playerSelection === scissors && computerSelection === paper) {
-      winner = playWins
+      winner = playWins; playerScore += 1;
     }
     else if (playerSelection === paper && computerSelection === rock) {
-      winner = playWins
+      winner = playWins; playerScore += 1;
     }
 
     // Computer wins scenarios
 
     else if (computerSelection === rock && playerSelection === paper) {
-      winner = compWins
+      winner = compWins; computerScore += 1;
     }
     else if (computerSelection === scissors && playerSelection === paper) {
-      winner = compWins
+      winner = compWins; computerScore += 1;
     }
     else if (computerSelection === paper && playerSelection === rock) {
-      winner = compWins
+      winner = compWins; computerScore += 1;
     }
     else {
       winner = tie;
