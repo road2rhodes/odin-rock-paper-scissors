@@ -112,11 +112,6 @@ function getComputerChoice() {
       winner = tie;
     }
 
-    // Updates scores
-    scores.innerText = `\n Player: ${playerScore} --- Computer: ${computerScore}`;
-     
-    // Alert winner
-
     if (playerScore === 5 && computerScore < playerScore) {
       alert('Player wins the match!');
       playerScore = 0;
@@ -128,7 +123,9 @@ function getComputerChoice() {
       computerScore = 0;
     }
 
-    
+    // Updates scores
+    scores.innerText = `\n Player: ${playerScore} --- Computer: ${computerScore}`;
+     
 
     return displayResults.innerText = `${results} \n ${winner}`;
 
