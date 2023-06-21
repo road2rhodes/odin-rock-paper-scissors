@@ -17,13 +17,13 @@
   // | Functionality for game buttons and results div |
 
     const rockButton = document.getElementById('rock');
-    rockButton.addEventListener('click', () => {playerChoice = rock; console.log(playerChoice); playRound(playerChoice,computerChoice())})
+    rockButton.addEventListener('click', () => {playerChoice = rock; playRound(playerChoice,computerChoice())})
 
     const paperButton = document.getElementById('paper');
-    paperButton.addEventListener('click', () => {playerChoice = paper; console.log(playerChoice); playRound(playerChoice,computerChoice())})
+    paperButton.addEventListener('click', () => {playerChoice = paper; playRound(playerChoice,computerChoice())})
 
     const scissorsButton = document.getElementById('scissors');
-    scissorsButton.addEventListener('click', () => {playerChoice = scissors; console.log(playerChoice); playRound(playerChoice,computerChoice())})
+    scissorsButton.addEventListener('click', () => {playerChoice = scissors; playRound(playerChoice,computerChoice())})
 
     // Results div
 
@@ -66,9 +66,14 @@ function getComputerChoice() {
 
    // Win scenarios
 
-   let playWins = "Player wins!";
-   let compWins = "Computer wins!";
-   let tie = "It's a tie!"
+  let playWins = "Player wins!";
+  let compWins = "Computer wins!";
+  let tie = "It's a tie!"
+
+  let playerScore;
+  let computerScore;
+  const scores = document.getElementById('scores');
+  scores.innerText = `Scores: \n Player: ${playerScore} \n Computer: ${computerScore}`;
 
 // | Play Rounds Function |
 
@@ -78,8 +83,6 @@ function getComputerChoice() {
     let results = `Player chose ${playerSelection}.
     Computer chose ${computerSelection}.`
     let winner;
-
-    console.log(`Player chose ${playerSelection}. Computer chose ${computerSelection}.`)
 
     // Player win scenarios
   
@@ -114,10 +117,7 @@ function getComputerChoice() {
 
   }
 
-  let playerScore = 0;
-  let computerScore = 0;
-  const scores = document.getElementById('scores');
-  scores.innerText = `Scores: \n Player: ${playerScore} \n Computer: ${computerScore}`;
+  
 
 // }
 
