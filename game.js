@@ -111,7 +111,7 @@ console.log(buttons);
       winner = tie;
     }
 
-    return displayResults.innerText = `${results} ${winner}`;
+    return displayResults.innerText = `${results} \n ${winner}`;
 
   }
 
