@@ -9,7 +9,7 @@
     /* Variable acts like function. Important to define as function without () so variable can be called like function */
     let calculation = Math.random(); // keeps choice random
     let choice // placeholder for computer choice calculation
-    let computerChoice = getComputerChoice; 
+    let computerChoice = getComputerChoice; // turn computer choice into function, so getComputerChoice is re-called each time. When I assigned getComputerChoice() by itself, it never updated.
 
   // Win scenarios
 
@@ -64,11 +64,7 @@
 
     // Results div
 
-    const displayResults = document.createElement('div');
-    displayResults.classList = "results";
-
-    const buttons = document.querySelector('.buttons');
-    document.body.insertBefore(displayResults, document.querySelector('script'));
+   
 
 
 console.log(buttons);
@@ -111,11 +107,15 @@ console.log(buttons);
       winner = tie;
     }
 
+     const displayResults = document.createElement('div');
+    displayResults.classList = "results";
+
+    const buttons = document.querySelector('.buttons');
+    document.body.insertBefore(displayResults, document.querySelector('script'));
+
     return displayResults.innerText = `${results} \n ${winner}`;
 
   }
-
-  playRound(playerChoice,computerChoice);
 
 // }
 
