@@ -70,10 +70,10 @@ function getComputerChoice() {
   let compWins = "Computer wins!";
   let tie = "It's a tie!"
 
-  let playerScore;
-  let computerScore;
+  let playerScore = 0;
+  let computerScore = 0;
   const scores = document.getElementById('scores');
-  scores.innerText = `Scores: \n Player: ${playerScore} \n Computer: ${computerScore}`;
+ 
 
 // | Play Rounds Function |
 
@@ -111,6 +111,8 @@ function getComputerChoice() {
       winner = tie;
     }
 
+    // Updates scores
+    scores.innerText = `Scores: \n Player: ${playerScore} \n Computer: ${computerScore}`;
      
 
     return displayResults.innerText = `${results} \n ${winner}`;
