@@ -42,7 +42,7 @@ h1 {
   margin: 0 1em;
   font-weight: 600;
   text-transform: uppercase;
-  background-color: orange;
+  background-color: rgb(255, 165, 0);
   color: rgb(255,255,255);
   border: 2px solid rgb(79, 115, 136);
   font-size: 27px;
@@ -66,4 +66,13 @@ h1 {
     color: inherit;
     font-size: 1.5em;
     font-family: monospace;
+  }
+
+  #scores {
+    text-align: center; 
+    margin: 1em auto; 
+    padding: 0.5em 0;
+    color: rgb(253, 204, 96);
+    background-color: rgb(98, 153, 185);
+    width: 500px;
   }
