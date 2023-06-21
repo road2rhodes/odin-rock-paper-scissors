@@ -6,20 +6,27 @@
    let scissors = "scissors";
 
   let playerChoice = "" // prompt("Rock, Paper, Scissors?").toLowerCase();
-  let computerChoice = getComputerChoice(); /* Variable acts like function. Important to define as function without () so variable can be called like function */
+    /* Variable acts like function. Important to define as function without () so variable can be called like function */
+    let calculation = Math.random(); // keeps choice random
+    let choice // placeholder for computer choice calculation
+    let computerChoice = getComputerChoice(); 
+
+  // Win scenarios
 
   let playWins = "Player wins!";
   let compWins = "Computer wins!";
   let tie = "It's a tie!"
 
+
+
 // | Calculate computer choice |
 
   function getComputerChoice() {
 
-    let calculation = Math.random();
-    let choice;
-
     /* Converting random number to choice. 0.1-0.3 = rock, 0.4-0.6 = scissors, 0.7-0.9 = paper. This assumes random number won't be 0 or 1*/
+
+    let calculation = Math.random(); // 
+    let choice
 
       if (calculation > 0 && calculation < 0.4) {
         choice = rock;
