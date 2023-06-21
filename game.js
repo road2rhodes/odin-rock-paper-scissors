@@ -19,34 +19,6 @@
 
 
 
-// | Calculate computer choice |
-
-  function getComputerChoice() {
-
-    /* Converting random number to choice. 0.1-0.3 = rock, 0.4-0.6 = scissors, 0.7-0.9 = paper. This assumes random number won't be 0 or 1*/
-
-    let calculation 
-    calculation = Math.random(); // 
-    let choice
-
-      if (calculation > 0 && calculation < 0.4) {
-        choice = rock;
-        }
-
-      else if (calculation >= 0.4 && calculation < 0.7) { // Paper
-        choice = paper;
-      }
-
-      else if (calculation >= 0.7 && calculation < 1) { // Scissors
-        choice = scissors;
-      }
-
-      else {
-        console.log('Oops');
-      }
-
-      return choice; // Only this line should have return so it is value of function.
-    }
 
     // console.log(typeof choice, choice);
 
@@ -70,8 +42,35 @@
     const buttons = document.querySelector('.buttons');
     document.body.insertBefore(displayResults, document.querySelector('script'));
 
+// | Calculate computer choice |
 
-console.log(buttons);
+function getComputerChoice() {
+
+  /* Converting random number to choice. 0.1-0.3 = rock, 0.4-0.6 = scissors, 0.7-0.9 = paper. This assumes random number won't be 0 or 1*/
+
+  let calculation 
+  calculation = Math.random(); // 
+  let choice
+
+    if (calculation > 0 && calculation < 0.4) {
+      choice = rock;
+      }
+
+    else if (calculation >= 0.4 && calculation < 0.7) { // Paper
+      choice = paper;
+    }
+
+    else if (calculation >= 0.7 && calculation < 1) { // Scissors
+      choice = scissors;
+    }
+
+    else {
+      console.log('Oops');
+    }
+
+    return choice; // Only this line should have return so it is value of function.
+  }
+
 
 // | Play Rounds Function |
 
