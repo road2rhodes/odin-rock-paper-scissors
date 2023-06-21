@@ -9,7 +9,7 @@
     /* Variable acts like function. Important to define as function without () so variable can be called like function */
     let calculation = Math.random(); // keeps choice random
     let choice // placeholder for computer choice calculation
-    let computerChoice = getComputerChoice(); 
+    let computerChoice = getComputerChoice; 
 
   // Win scenarios
 
@@ -54,13 +54,13 @@
   // | Functionality for game buttons and results div |
 
     const rockButton = document.getElementById('rock');
-    rockButton.addEventListener('click', () => {playerChoice = rock; console.log(playerChoice); playRound(playerChoice,computerChoice)})
+    rockButton.addEventListener('click', () => {playerChoice = rock; console.log(playerChoice); playRound(playerChoice,computerChoice())})
 
     const paperButton = document.getElementById('paper');
-    paperButton.addEventListener('click', () => {playerChoice = paper; console.log(playerChoice); playRound(playerChoice,computerChoice)})
+    paperButton.addEventListener('click', () => {playerChoice = paper; console.log(playerChoice); playRound(playerChoice,computerChoice())})
 
     const scissorsButton = document.getElementById('scissors');
-    scissorsButton.addEventListener('click', () => {playerChoice = scissors; console.log(playerChoice); playRound(playerChoice,computerChoice)})
+    scissorsButton.addEventListener('click', () => {playerChoice = scissors; console.log(playerChoice); playRound(playerChoice,computerChoice())})
 
     // Results div
 
