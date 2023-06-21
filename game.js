@@ -11,17 +11,6 @@
     let choice // placeholder for computer choice calculation
     let computerChoice = getComputerChoice; // turn computer choice into function, so getComputerChoice is re-called each time. When I assigned getComputerChoice() by itself, it never updated.
 
-  // Win scenarios
-
-  let playWins = "Player wins!";
-  let compWins = "Computer wins!";
-  let tie = "It's a tie!"
-
-
-
-
-    // console.log(typeof choice, choice);
-
 
   // | Functionality for game buttons and results div |
 
@@ -71,6 +60,11 @@ function getComputerChoice() {
     return choice; // Only this line should have return so it is value of function.
   }
 
+   // Win scenarios
+
+   let playWins = "Player wins!";
+   let compWins = "Computer wins!";
+   let tie = "It's a tie!"
 
 // | Play Rounds Function |
 
