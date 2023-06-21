@@ -27,7 +27,7 @@ body {
   text-transform: uppercase;
   background-color: orange;
   color: rgb(255,255,255);
-  border: none;
+  border: 2px solid rgb(79, 115, 136);
   font-size: 27px;
   height: 59px;
   }
@@ -35,4 +35,6 @@ body {
   button:active {
     background-color: rgb(255,255,255);
     color: orange;
+    transition: background-color 100ms;
+
   }
