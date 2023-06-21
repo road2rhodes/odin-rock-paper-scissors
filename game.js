@@ -64,7 +64,11 @@
 
     // Results div
 
-   
+    const displayResults = document.createElement('div');
+    displayResults.classList = "results";
+
+    const buttons = document.querySelector('.buttons');
+    document.body.insertBefore(displayResults, document.querySelector('script'));
 
 
 console.log(buttons);
@@ -107,11 +111,7 @@ console.log(buttons);
       winner = tie;
     }
 
-     const displayResults = document.createElement('div');
-    displayResults.classList = "results";
-
-    const buttons = document.querySelector('.buttons');
-    document.body.insertBefore(displayResults, document.querySelector('script'));
+     
 
     return displayResults.innerText = `${results} \n ${winner}`;
 
