@@ -10,7 +10,7 @@
 body {
   background-color: rgb(113, 162, 192);
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 }
 
 /* || Buttons || */
@@ -23,6 +23,7 @@ body {
   margin: 2em auto;
   width: 40vw;
   height: 30%;
+  row-gap: 1em;
 }
 
   button {
