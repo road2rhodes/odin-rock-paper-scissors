@@ -11,8 +11,7 @@
     let choice // placeholder for computer choice calculation
     let computerChoice = getComputerChoice; // turn computer choice into function, so getComputerChoice is re-called each time. When I assigned getComputerChoice() by itself, it never updated.
 
-    let playerScore = 0;
-    let computerScore = 0;
+ 
 
 
   // | Functionality for game buttons and results div |
@@ -33,6 +32,8 @@
 
     const buttons = document.querySelector('.buttons');
     document.body.insertBefore(displayResults, document.querySelector('script'));
+
+ 
 
 // | Calculate computer choice |
 
@@ -112,6 +113,11 @@ function getComputerChoice() {
     return displayResults.innerText = `${results} \n ${winner}`;
 
   }
+
+  let playerScore = 0;
+  let computerScore = 0;
+  const scores = document.getElementById('scores');
+  scores.innerText = `Scores: \n Player: ${playerScore} \n Computer: ${computerScore}`;
 
 // }
 
