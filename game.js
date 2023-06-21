@@ -25,7 +25,8 @@
 
     /* Converting random number to choice. 0.1-0.3 = rock, 0.4-0.6 = scissors, 0.7-0.9 = paper. This assumes random number won't be 0 or 1*/
 
-    let calculation = Math.random(); // 
+    let calculation 
+    calculation = Math.random(); // 
     let choice
 
       if (calculation > 0 && calculation < 0.4) {
@@ -60,6 +61,8 @@
 
     const scissorsButton = document.getElementById('scissors');
     scissorsButton.addEventListener('click', () => {playerChoice = scissors; console.log(playerChoice); playRound(playerChoice,computerChoice)})
+
+    // Results div
 
     const displayResults = document.createElement('div');
     displayResults.classList = "results";
@@ -108,7 +111,7 @@ console.log(buttons);
       winner = tie;
     }
 
-    return displayResults.innerText = results + winner;
+    return displayResults.innerText = `${results} ${winner}`;
 
   }
 
