@@ -112,6 +112,17 @@ function getComputerChoice() {
       winner = tie;
     }
 
+    if (playerScore === 5 && computerScore < playerScore) {
+      alert('Player wins the match!');
+      playerScore = 0;
+      computerScore = 0;
+    }
+    else if (computerScore=== 5 && computerScore > playerScore) {
+      alert('Computer wins the match!');
+      playerScore = 0;
+      computerScore = 0;
+    }
+
     // Updates scores
     scores.innerText = `\n Player: ${playerScore} --- Computer: ${computerScore}`;
      
