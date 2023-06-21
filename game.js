@@ -40,38 +40,61 @@
 
     // console.log(typeof choice, choice);
 
+    const rockButton = document.getElementById('rock');
+    rockButton.addEventListener('click', () => {playerChoice = rock; console.log(playerChoice); playRound(playerChoice,computerChoice)})
+
+    const paperButton = document.getElementById('paper');
+    paperButton.addEventListener('click', () => {playerChoice = paper; console.log(playerChoice); playRound(playerChoice,computerChoice)})
+
+    const scissorsButton = document.getElementById('scissors');
+    scissorsButton.addEventListener('click', () => {playerChoice = scissors; console.log(playerChoice); playRound(playerChoice,computerChoice)})
+
+    const displayResults = document.createElement('div');
+    displayResults.classList = "results";
+
+    const buttons = document.querySelector('.buttons');
+    buttons.appendChild(displayResults);
+
+
+console.log(buttons);
 
   function playRound(playerSelection, computerSelection) {
   
+
+    let results = `Player chose ${playerSelection}.
+    Computer chose ${computerSelection}.`
+    let winner;
+
     console.log(`Player chose ${playerSelection}. Computer chose ${computerSelection}.`)
 
     // Player win scenarios
   
     if (playerSelection === rock && computerSelection === scissors) {
-      console.log (playWins)
+      winner = playWins
     }
     else if (playerSelection === scissors && computerSelection === paper) {
-      console.log (playWins)
+      winner = playWins
     }
     else if (playerSelection === paper && computerSelection === rock) {
-      console.log (playWins)
+      winner = playWins
     }
 
     // Computer wins scenarios
 
     else if (computerSelection === rock && playerSelection === paper) {
-      console.log (compWins)
+      winner = compWins
     }
     else if (computerSelection === scissors && playerSelection === paper) {
-      console.log (compWins)
+      winner = compWins
     }
     else if (computerSelection === paper && playerSelection === rock) {
-      console.log (compWins)
+      winner = compWins
     }
     else {
-      console.log(tie);
+      winner = tie;
     }
 
+    return displayResults.innerText = results + winner;
 
   }
 
@@ -82,20 +105,4 @@
 // const newGame = document.querySelector('#new-game');
 // newGame.addEventListener('click', game);
 
-const rockButton = document.getElementById('rock');
-rockButton.addEventListener('click', () => {playerChoice = rock; console.log(playerChoice); playRound(playerChoice,computerChoice)})
 
-const paperButton = document.getElementById('paper');
-paperButton.addEventListener('click', () => {playerChoice = paper; console.log(playerChoice); playRound(playerChoice,computerChoice)})
-
-const scissorsButton = document.getElementById('scissors');
-scissorsButton.addEventListener('click', () => {playerChoice = scissors; console.log(playerChoice); playRound(playerChoice,computerChoice)})
-
-const displayResults = document.createElement('div');
-displayResults.classList = "results";
-displayResults.innerText = 
-const buttons = document.querySelector('.buttons');
-buttons.appendChild(displayResults);
-
-
-console.log(buttons);
