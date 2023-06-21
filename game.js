@@ -1,14 +1,18 @@
 function game() { // wrapper for game functions
       
-  
+   // Variables for choices
+   let rock = "rock";
+   let paper = "paper";
+   let scissors = "scissors";
+   
   const newGame = document.querySelector('#new-game');
   newGame.addEventListener('click', game);
-  console.log(newGame);
+
+  const rockButton = document.getElementById('rock');
+  rockButton.addEventListener('click',playRound(rock))
+  console.log(rockButton);
   
-  // Variables for choices
-  let rock = "rock";
-  let paper = "paper";
-  let scissors = "scissors";
+ 
 
   let playerChoice = prompt("Rock, Paper, Scissors?").toLowerCase();
   let computerChoice = getComputerChoice(); /* Variable acts like function. Important to define as function without () so variable can be called like function */
