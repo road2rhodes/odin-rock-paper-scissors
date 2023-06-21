@@ -9,6 +9,7 @@
 
 body {
   background-color: rgb(113, 162, 192);
+  width: 100vw;
   height: 100vh;
 }
 
@@ -47,4 +48,8 @@ body {
 
   #new-game {
     width: 100%;
+  }
+
+  .results {
+    text-align: center;
   }
