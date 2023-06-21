@@ -12,6 +12,8 @@
   let compWins = "Computer wins!";
   let tie = "It's a tie!"
 
+// | Calculate computer choice |
+
   function getComputerChoice() {
 
     let calculation = Math.random();
@@ -40,6 +42,9 @@
 
     // console.log(typeof choice, choice);
 
+
+  // | Functionality for game buttons and results div |
+
     const rockButton = document.getElementById('rock');
     rockButton.addEventListener('click', () => {playerChoice = rock; console.log(playerChoice); playRound(playerChoice,computerChoice)})
 
@@ -53,10 +58,12 @@
     displayResults.classList = "results";
 
     const buttons = document.querySelector('.buttons');
-    buttons.appendChild(displayResults);
+    document.body.insertBefore(displayResults, document.querySelector('script'));
 
 
 console.log(buttons);
+
+// | Play Rounds Function |
 
   function playRound(playerSelection, computerSelection) {
   
