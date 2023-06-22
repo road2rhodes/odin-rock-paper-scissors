@@ -126,8 +126,9 @@ function getComputerChoice() {
     // Updates scores
     scores.innerText = `\n Player: ${playerScore} --- Computer: ${computerScore}`;
      
-
-    return displayResults.innerText = `${results} \n ${winner}`;
+    displayResults = displayResults.innerText = `${results} \n ${winner}`;
+    
+    return displayResults;
 
   }
 
