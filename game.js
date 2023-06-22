@@ -127,16 +127,9 @@ function getComputerChoice() {
     scores.innerText = `\n Player: ${playerScore} --- Computer: ${computerScore}`;
      
     displayResults = displayResults.innerText = `${results} \n ${winner}`;
-    
+
     return displayResults;
 
   }
-
-  
-
-// }
-
-// const newGame = document.querySelector('#new-game');
-// newGame.addEventListener('click', game);
 
 
